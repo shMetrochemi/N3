@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>输入密码以进入网站！</title>
+    <link rel="stylesheet" type="text/css" href="Login.css">
+</head>
+<head>
+<form id="passwordForm">
+    <center><h1>输入密码以进入网站！</h1>
+    <p>Use password to get into the wedside!</p>
+    <label for="password">密码：</label>
+    <input type="password" id="passwordInput" required>
+    <button type="submit">点击进入！</button>
+    </center>
+</form>
+<p>没有账号？，<a href="Singing.htm">点我注册！</a></p>
+<script>
+    document.getElementById('passwordForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        var correctPassword = "Admin114514";
+        if (passwordInput.value === correctPassword) {
+            window.location.href = 'officer.htm';
+        } else {
+            alert ("您的密码是错的，请重新输入！")
+        }
+        passwordInput.value = '';
+    });
+</script>
+</head>
+</html>
